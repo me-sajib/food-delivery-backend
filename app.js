@@ -5,6 +5,7 @@ require("./config/db");
 
 const userRouter = require('./routes/user.route');
 const itemRouter = require('./routes/products.route');
+const orderRouter = require('./routes/order.route');
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -14,5 +15,6 @@ app.use(cors());
 
 app.use('/users', userRouter);
 app.use('/foods', itemRouter);
+app.use('/orders', orderRouter);
 
 module.exports = app;
